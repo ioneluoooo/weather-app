@@ -1,0 +1,69 @@
+@mixin center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    background-image: url('./assets/istockphoto-1328689113-612x612.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+$main-font : Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+.Container {
+    @include center-div;
+    flex-direction: column;
+    font-family: $main-font;
+
+    .main {
+        position: absolute;
+        top: 30%;
+        }
+
+
+    .Search {
+       @include center-div;
+       gap: 15px;
+       margin-bottom: 30px;
+
+       .my-input {
+        border-radius: 5px;
+        background-color: beige;
+        border-bottom: 1px;
+        border: none;
+        width: 300px;
+        height: 30px;
+        padding: 10px 15px;
+        font-size: large;
+        outline: none;
+        color: gray;
+
+       }
+
+       .my-btn{
+        font-family: $main-font;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: none;
+        background: rgba(0, 0, 255, 0.5);
+        color: white;
+        transition: color 0.3s;
+        &:hover {
+            color: gray;
+        }
+        cursor: pointer
+
+       }
+    }
+
+    .Data {
+        @include center-div;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.8); /* Change the opacity value as needed */
+        border-radius: 5px;
+        padding: 60px 120px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a box shadow */
+    }
+}
