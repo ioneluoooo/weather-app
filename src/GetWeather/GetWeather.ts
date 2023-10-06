@@ -2,7 +2,7 @@
 
 async function GetWeather(city : string) {
 
-    const ApiKey = '7d927606f6246564a29f5a43c2ef3691'
+    const ApiKey = 'YOUR_API_KEY'
     const ApiUrl =  `https://api.openweathermap.org/data/2.5/weather?q=${city}&apiKey=${ApiKey}`
     
 
